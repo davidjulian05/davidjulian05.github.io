@@ -1,311 +1,491 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Julian | Chuyên gia phân tích kiến trúc dữ liệu</title>
+    <meta name="description" content="David Julian - Chuyên gia phân tích kiến trúc dữ liệu, tối ưu hóa trải nghiệm người dùng và xây dựng hệ thống thông tin số.">
+    
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --accent-color: #2563eb;
+            --accent-hover: #1d4ed8;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
 
-<title>David Julian | Chuyên gia phân tích kiến trúc dữ liệu</title>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<meta name="description" content="David Julian - Chuyên gia phân tích kiến trúc dữ liệu, tối ưu hóa trải nghiệm người dùng và xây dựng hệ thống thông tin số.">
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+        /* Header Navigation */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+        }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    line-height:1.8;
-    color:#333;
-    background:#f5f7fa;
-}
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 24px;
+        }
 
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-}
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
 
-.banner{
-    width:100%;
-    display:block;
-}
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
 
-.header{
-    background:#fff;
-    text-align:center;
-    padding:40px 20px;
-}
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
 
-.avatar{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid #fff;
-    margin-top:-90px;
-    box-shadow:0 4px 15px rgba(0,0,0,.15);
-}
+        .nav-links a.active, .nav-links a:hover {
+            color: var(--accent-color);
+        }
 
-h1{
-    margin-top:20px;
-    font-size:42px;
-}
+        /* Banner & Hero Header */
+        .hero-banner-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 20px auto 0;
+            padding: 0 20px;
+        }
 
-.subtitle{
-    color:#666;
-    margin-top:10px;
-}
+        .banner-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+        }
 
-.section{
-    background:#fff;
-    margin:25px 0;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,.08);
-}
+        .profile-header {
+            background: var(--bg-card);
+            max-width: 1000px;
+            margin: -60px auto 0;
+            padding: 0 30px 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            position: relative;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
 
-h2{
-    margin-bottom:20px;
-    color:#1f3c88;
-}
+        .avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+            margin-top: -65px;
+            box-shadow: var(--shadow-md);
+        }
 
-h3{
-    margin-top:20px;
-    color:#444;
-}
+        h1 {
+            margin-top: 15px;
+            font-size: 2.1rem;
+            color: var(--primary-color);
+            font-weight: 800;
+        }
 
-ul{
-    padding-left:25px;
-}
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-top: 8px;
+            font-weight: 500;
+        }
 
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:15px;
-}
+        /* Layout Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
 
-table th,
-table td{
-    border:1px solid #ddd;
-    padding:12px;
-    text-align:left;
-}
+        .section {
+            background: var(--bg-card);
+            margin-bottom: 24px;
+            padding: 32px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+        }
 
-table th{
-    background:#f0f4ff;
-}
+        h2 {
+            font-size: 1.45rem;
+            color: var(--primary-color);
+            margin-bottom: 18px;
+            position: relative;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #eff6ff;
+        }
 
-blockquote{
-    background:#f8f9fc;
-    border-left:5px solid #1f3c88;
-    padding:20px;
-    font-style:italic;
-    margin-top:15px;
-}
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--accent-color);
+        }
 
-footer{
-    text-align:center;
-    padding:30px;
-    color:#777;
-}
-</style>
+        h3 {
+            font-size: 1.15rem;
+            color: #334155;
+            margin: 20px 0 10px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: #334155;
+            text-align: justify;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Skills Chips */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .skill-chip {
+            background: #eff6ff;
+            color: var(--accent-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid #dbeafe;
+        }
+
+        /* Modern Table */
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        table th {
+            background-color: #f1f5f9;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: left;
+            padding: 14px 18px;
+        }
+
+        table td {
+            padding: 14px 18px;
+            border-top: 1px solid var(--border-color);
+            color: #475569;
+        }
+
+        table tbody tr:hover {
+            background-color: #f8fafc;
+        }
+
+        /* Quote Box */
+        blockquote {
+            background: #eff6ff;
+            border-left: 4px solid var(--accent-color);
+            padding: 20px 24px;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #1e3a8a;
+            font-size: 1.05rem;
+        }
+
+        /* Related Articles Grid */
+        .related-posts {
+            margin-top: 35px;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 18px;
+        }
+
+        .related-card {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .related-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            text-decoration: none;
+        }
+
+        .related-card h3 {
+            font-size: 0.98rem;
+            color: var(--primary-color);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Footer & External Links */
+        footer {
+            background: #ffffff;
+            border-top: 1px solid var(--border-color);
+            padding: 35px 20px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 18px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 640px) {
+            .profile-header {
+                padding: 0 16px 24px;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .section {
+                padding: 20px;
+            }
+            .banner-img {
+                height: 160px;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<img class="banner"
-src="https://sf-static.upanhlaylink.com/img/image_20260827493075b7f0e50bdf16c293717b851427.jpg"
-alt="David Julian Banner">
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="https://davidjulian05.github.io/" class="logo">David Julian</a>
+            <nav class="nav-links">
+                <a href="https://davidjulian05.github.io/" class="active">Trang Chủ</a>
+            </nav>
+        </div>
+    </header>
 
-<div class="container">
-
-<header class="header">
-
-<img class="avatar"
-src="https://sf-static.upanhlaylink.com/img/image_202608274378ee4a767d7556a51ed98f69388eb1.jpg"
-alt="David Julian Avatar">
-
-<h1>David Julian</h1>
-
-<p class="subtitle">
-Chuyên gia phân tích kiến trúc dữ liệu · Tối ưu hóa trải nghiệm người dùng · Xây dựng hệ thống thông tin số
-</p>
-
-</header>
-
-<section class="section">
-
-<h2>Giới thiệu</h2>
-
-<p>
-Chào bạn, tôi là David Julian. Tôi hoạt động trong lĩnh vực phân tích kiến trúc dữ liệu và tối ưu hóa trải nghiệm người dùng trên các nền tảng số. Lớn lên cùng sự phát triển của công nghệ, tôi sớm nhận ra dữ liệu không đơn thuần là những con số vô cảm trên máy chủ.
-</p>
-
-<br>
-
-<p>
-Dữ liệu chính là cầu nối giữa nhu cầu thực tế của con người và nguồn thông tin minh bạch của xã hội. Trong góc nhìn nghề nghiệp của tôi, một hệ thống cung cấp dữ liệu hiệu quả phải đáp ứng hai tiêu chuẩn cốt lõi: tốc độ cập nhật và mức độ chuẩn xác.
-</p>
-
-<br>
-
-<p>
-Tôi lựa chọn đồng hành cùng Thiên Phú với vai trò người định hướng kỹ thuật và xây dựng cẩm nang tra cứu thông tin cho cộng đồng. Tôi nhận thấy nhiều người dùng internet hiện nay đang đối mặt với tình trạng quá tải thông tin hoặc thiếu đồng bộ từ các nguồn không rõ nguồn gốc.
-</p>
-
-<br>
-
-<p>
-Trong các loại hình thông tin số liệu công cộng, dữ liệu về
-<a href="https://xosothienphu.vn/xsmb-sxmb-kqxsmb-xo-so-mien-bac.html" target="_blank">
-xổ số Hà Nội
-</a>
-là một ví dụ điển hình cho thấy tầm quan trọng của tính thời điểm, nơi mà từng con số hiển thị đều cần đồng bộ hoàn toàn với thời gian thực.
-</p>
-
-</section>
-
-<section class="section">
-
-<h2>Vai trò tại Thiên Phú</h2>
-
-<h3>Hướng dẫn tùy chỉnh bộ lọc theo nhu cầu</h3>
-
-<p>
-Tôi biên soạn tài liệu hướng dẫn phân loại dữ liệu theo mốc thời gian, giúp bạn dễ dàng khoanh vùng phạm vi thông tin cần tìm chỉ sau vài thao tác.
-</p>
-
-<h3>Hướng dẫn khai thác kho lưu trữ dữ liệu cũ</h3>
-
-<p>
-Bằng việc tổ chức lại cơ sở dữ liệu lịch sử một cách hệ thống, tôi hướng dẫn người xem truy xuất các bảng số liệu từ quá khứ để phục vụ công tác đối chiếu hoặc kiểm tra thông tin.
-</p>
-
-<h3>Hướng dẫn tối ưu hóa trải nghiệm hiển thị</h3>
-
-<p>
-Tôi điều chỉnh giao diện hiển thị bảng biểu, kích thước phông chữ và độ tương phản màu sắc để đảm bảo dù bạn sử dụng điện thoại hay máy tính, thông tin đều hiển thị rõ ràng.
-</p>
-
-</section>
-
-<section class="section">
-
-<h2>Triết lý làm việc</h2>
-
-<p>
-Đối với tôi, công việc này là hành trình xây dựng niềm tin số với người dùng. Tôi cam kết duy trì một môi trường thông tin minh bạch, trung thực, không chứa nội dung rác hay các yếu tố định hướng lệch lạc.
-</p>
-
-<br>
-
-<p>
-Mọi nỗ lực nâng cấp hệ thống đều hướng tới mục tiêu trọng tâm: mang đến cho bạn một kênh tra cứu thông tin an toàn, ổn định và tin cậy mỗi ngày.
-</p>
-
-</section>
-
-<section class="section">
-
-<h2>Giá trị cốt lõi</h2>
-
-<table>
-<thead>
-<tr>
-<th>Giá trị</th>
-<th>Mô tả</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>Chính xác</td>
-<td>Ưu tiên độ tin cậy của dữ liệu</td>
-</tr>
-
-<tr>
-<td>Minh bạch</td>
-<td>Tôn trọng nguồn gốc và tính xác thực</td>
-</tr>
-
-<tr>
-<td>Hiệu quả</td>
-<td>Tối ưu hóa trải nghiệm tra cứu</td>
-</tr>
-
-<tr>
-<td>Đồng bộ</td>
-<td>Đảm bảo dữ liệu cập nhật liên tục</td>
-</tr>
-
-<tr>
-<td>Người dùng</td>
-<td>Lấy nhu cầu người dùng làm trung tâm</td>
-</tr>
-</tbody>
-</table>
-
-</section>
-
-<section class="section">
-
-<h2>Chuyên môn</h2>
-
-<ul>
-<li>Phân tích kiến trúc dữ liệu</li>
-<li>Tối ưu hóa trải nghiệm người dùng (UX)</li>
-<li>Quản trị và tổ chức dữ liệu số</li>
-<li>Xây dựng cẩm nang tra cứu thông tin</li>
-<li>Thiết kế quy trình khai thác dữ liệu</li>
-<li>Chuẩn hóa hệ thống hiển thị thông tin</li>
-<li>Quản lý kho dữ liệu lịch sử</li>
-</ul>
-
-</section>
-
-<section class="section">
-
-<h2>Sứ mệnh</h2>
-
-<p>
-Xây dựng môi trường thông tin minh bạch, khoa học và dễ tiếp cận để mọi người có thể chủ động khai thác dữ liệu một cách hiệu quả, tiết kiệm thời gian và nâng cao khả năng tiếp cận nguồn thông tin chính xác.
-</p>
-
-</section>
-
-<section class="section">
-
-<h2>Chia sẻ từ David Julian</h2>
-
-<blockquote>
-"Sự rõ ràng trong từng con số chính là sự tôn trọng dành cho thời gian của bạn. Hãy cùng tôi xây dựng thói quen tiếp cận thông tin chủ động và hiệu quả."
-</blockquote>
-
-</section>
-
-<footer>
-© 2026 David Julian. All Rights Reserved.
-</footer>
-
-</div>
-
-<section class="related-posts">
-    <h2>Xem thêm</h2>
-
-    <div class="related-grid">
-
-        <a class="related-card"
-           href="https://davidjulian05.github.io/home/do-ket-qua-xo-so-mien-bac-thu-2-hang-tuan-giao-dien-de-nhin.html">
-            <h3>Dò kết quả Xổ số Miền Bắc Thứ 2 hàng tuần, giao diện dễ nhìn</h3>
-        </a>
-        <a class="related-card"
-           href="https://davidjulian05.github.io/home/tra-cuu-ket-qua-xsmb-giao-dien-de-nhin-ngay.html">
-            <h3>Tra cứu Kết quả XSMB giao diện dễ nhìn ngay</h3>
-        </a>
+    <!-- Banner & Profile Header -->
+    <div class="hero-banner-container">
+        <img class="banner-img" src="https://sf-static.upanhlaylink.com/img/image_20260827493075b7f0e50bdf16c293717b851427.jpg" alt="David Julian Banner">
     </div>
-</section> 
+
+    <div class="profile-header">
+        <img class="avatar" src="https://sf-static.upanhlaylink.com/img/image_202608274378ee4a767d7556a51ed98f69388eb1.jpg" alt="David Julian Avatar">
+        <h1>David Julian</h1>
+        <p class="subtitle">Chuyên gia phân tích kiến trúc dữ liệu · Tối ưu hóa trải nghiệm người dùng · Xây dựng hệ thống thông tin số</p>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <section class="section">
+            <h2>Giới thiệu</h2>
+            <p>Chào bạn, tôi là David Julian. Tôi hoạt động trong lĩnh vực phân tích kiến trúc dữ liệu và tối ưu hóa trải nghiệm người dùng trên các nền tảng số. Lớn lên cùng sự phát triển của công nghệ, tôi sớm nhận ra dữ liệu không đơn thuần là những con số vô cảm trên máy chủ.</p>
+            <p>Dữ liệu chính là cầu nối giữa nhu cầu thực tế của con người và nguồn thông tin minh bạch của xã hội. Trong góc nhìn nghề nghiệp của tôi, một hệ thống cung cấp dữ liệu hiệu quả phải đáp ứng hai tiêu chuẩn cốt lõi: tốc độ cập nhật và mức độ chuẩn xác.</p>
+            <p>Tôi lựa chọn đồng hành cùng Thiên Phú với vai trò người định hướng kỹ thuật và xây dựng cẩm nang tra cứu thông tin cho cộng đồng. Tôi nhận thấy nhiều người dùng internet hiện nay đang đối mặt với tình trạng quá tải thông tin hoặc thiếu đồng bộ từ các nguồn không rõ nguồn gốc.</p>
+            <p>Trong các loại hình thông tin số liệu công cộng, dữ liệu về <a href="https://xosothienphu.vn/xsmb-sxmb-kqxsmb-xo-so-mien-bac.html" target="_blank" rel="noopener">xổ số Hà Nội</a> là một ví dụ điển hình cho thấy tầm quan trọng của tính thời điểm, nơi mà từng con số hiển thị đều cần đồng bộ hoàn toàn với thời gian thực.</p>
+        </section>
+
+        <section class="section">
+            <h2>Vai trò tại Thiên Phú</h2>
+            
+            <h3>Hướng dẫn tùy chỉnh bộ lọc theo nhu cầu</h3>
+            <p>Tôi biên soạn tài liệu hướng dẫn phân loại dữ liệu theo mốc thời gian, giúp bạn dễ dàng khoanh vùng phạm vi thông tin cần tìm chỉ sau vài thao tác.</p>
+
+            <h3>Hướng dẫn khai thác kho lưu trữ dữ liệu cũ</h3>
+            <p>Bằng việc tổ chức lại cơ sở dữ liệu lịch sử một cách hệ thống, tôi hướng dẫn người xem truy xuất các bảng số liệu từ quá khứ để phục vụ công tác đối chiếu hoặc kiểm tra thông tin.</p>
+
+            <h3>Hướng dẫn tối ưu hóa trải nghiệm hiển thị</h3>
+            <p>Tôi điều chỉnh giao diện hiển thị bảng biểu, kích thước phông chữ và độ tương phản màu sắc để đảm bảo dù bạn sử dụng điện thoại hay máy tính, thông tin đều hiển thị rõ ràng.</p>
+        </section>
+
+        <section class="section">
+            <h2>Triết lý làm việc</h2>
+            <p>Đối với tôi, công việc này là hành trình xây dựng niềm tin số với người dùng. Tôi cam kết duy trì một môi trường thông tin minh bạch, trung thực, không chứa nội dung rác hay các yếu tố định hướng lệch lạc.</p>
+            <p>Mọi nỗ lực nâng cấp hệ thống đều hướng tới mục tiêu trọng tâm: mang đến cho bạn một kênh tra cứu thông tin an toàn, ổn định và tin cậy mỗi ngày.</p>
+        </section>
+
+        <section class="section">
+            <h2>Giá trị cốt lõi</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Giá trị</th>
+                            <th>Mô tả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Chính xác</strong></td>
+                            <td>Ưu tiên độ tin cậy của dữ liệu</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Minh bạch</strong></td>
+                            <td>Tôn trọng nguồn gốc và tính xác thực</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hiệu quả</strong></td>
+                            <td>Tối ưu hóa trải nghiệm tra cứu</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Đồng bộ</strong></td>
+                            <td>Đảm bảo dữ liệu cập nhật liên tục</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Người dùng</strong></td>
+                            <td>Lấy nhu cầu người dùng làm trung tâm</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Chuyên môn</h2>
+            <div class="skills-grid">
+                <span class="skill-chip">Phân tích kiến trúc dữ liệu</span>
+                <span class="skill-chip">Tối ưu hóa trải nghiệm người dùng (UX)</span>
+                <span class="skill-chip">Quản trị & Tổ chức dữ liệu số</span>
+                <span class="skill-chip">Xây dựng cẩm nang tra cứu</span>
+                <span class="skill-chip">Thiết kế quy trình khai thác dữ liệu</span>
+                <span class="skill-chip">Chuẩn hóa hệ thống hiển thị</span>
+                <span class="skill-chip">Quản lý kho dữ liệu lịch sử</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Sứ mệnh</h2>
+            <p>Xây dựng môi trường thông tin minh bạch, khoa học và dễ tiếp cận để mọi người có thể chủ động khai thác dữ liệu một cách hiệu quả, tiết kiệm thời gian và nâng cao khả năng tiếp cận nguồn thông tin chính xác.</p>
+        </section>
+
+        <section class="section">
+            <h2>Chia sẻ từ David Julian</h2>
+            <blockquote>
+                "Sự rõ ràng trong từng con số chính là sự tôn trọng dành cho thời gian của bạn. Hãy cùng tôi xây dựng thói quen tiếp cận thông tin chủ động và hiệu quả."
+            </blockquote>
+        </section>
+
+        <!-- Feature Bài viết liên quan -->
+        <section class="section related-posts">
+            <h2>Bài viết liên quan</h2>
+            <div class="related-grid">
+                <a class="related-card" href="https://davidjulian05.github.io/do-ket-qua-xo-so-mien-bac-thu-2-hang-tuan-giao-dien-de-nhin.html">
+                    <h3>Dò kết quả Xổ số Miền Bắc Thứ 2 hàng tuần, giao diện dễ nhìn</h3>
+                </a>
+                <a class="related-card" href="https://davidjulian05.github.io/tra-cuu-ket-qua-xsmb-giao-dien-de-nhin-ngay.html">
+                    <h3>Tra cứu Kết quả XSMB giao diện dễ nhìn ngay</h3>
+                </a>
+                <a class="related-card" href="https://davidjulian05.github.io/don-xem-ket-qua-xo-so-mien-trung-thu-3-voi-chinh-xac.html">
+                    <h3>Đón xem kết quả Xổ Số Miền Trung Thứ 3 chính xác</h3>
+                </a>
+                <a class="related-card" href="https://davidjulian05.github.io/tra-cuu-ket-qua-xo-so-vinh-long-de-theo-doi.html">
+                    <h3>Tra cứu kết quả Xổ số Vĩnh Long dễ theo dõi</h3>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <ul class="footer-links">
+            <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://codeberg.org" target="_blank" rel="noopener">Codeberg</a></li>
+            <li><a href="https://framer.com" target="_blank" rel="noopener">Framer</a></li>
+            <li><a href="https://vercel.com" target="_blank" rel="noopener">Vercel</a></li>
+            <li><a href="https://workers.cloudflare.com" target="_blank" rel="noopener">Worker.dev</a></li>
+            <li><a href="https://netlify.com" target="_blank" rel="noopener">Netlify</a></li>
+            <li><a href="https://render.com" target="_blank" rel="noopener">Onrender</a></li>
+        </ul>
+        <p class="copyright">&copy; 2026 David Julian. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
