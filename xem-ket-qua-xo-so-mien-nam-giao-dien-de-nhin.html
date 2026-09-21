@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra Cứu Kết Quả Xổ Số Miền Nam Giao Diện Dễ Nhìn &amp; Mượt Mà</title>
+    <meta name="description" content="Hướng dẫn xem trực tiếp kết quả xổ số kiến thiết miền Nam hàng ngày với giao diện dễ nhìn, cập nhật nhanh chóng và chính xác trên mọi thiết bị di động.">
+    
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --accent-color: #2563eb;
+            --accent-hover: #1d4ed8;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 20px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 18px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .article-card {
+            background: var(--bg-card);
+            padding: 35px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            line-height: 1.35;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            color: var(--primary-color);
+            margin: 28px 0 14px;
+            position: relative;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #eff6ff;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 45px;
+            height: 2px;
+            background: var(--accent-color);
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            color: #334155;
+            margin: 18px 0 10px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #334155;
+            text-align: justify;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Figures & Images */
+        figure {
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        figcaption {
+            margin-top: 8px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Schedule List & Prize List */
+        .styled-list {
+            list-style: none;
+            padding: 0;
+            margin: 18px 0;
+            background: #f8fafc;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .styled-list li {
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--border-color);
+            color: #334155;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .styled-list li:last-child {
+            border-bottom: none;
+        }
+
+        .styled-list li strong {
+            color: var(--primary-color);
+        }
+
+        /* Addresses Grid */
+        .address-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 14px;
+            margin: 20px 0;
+        }
+
+        .address-card {
+            background: #f8fafc;
+            padding: 16px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            border: 1px solid var(--border-color);
+            border-left-width: 4px;
+        }
+
+        .address-card strong {
+            display: block;
+            color: var(--primary-color);
+            margin-bottom: 4px;
+            font-size: 0.98rem;
+        }
+
+        .address-card span {
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        /* Extra Read Link Box */
+        .read-more-box {
+            margin: 25px 0;
+            padding: 16px 20px;
+            background: #eff6ff;
+            border-radius: var(--radius);
+            border: 1px solid #dbeafe;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .read-more-box strong {
+            color: var(--primary-color);
+            white-space: nowrap;
+        }
+
+        /* Related Articles Grid */
+        .related-posts {
+            margin-top: 40px;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 18px;
+        }
+
+        .related-card {
+            background: var(--bg-card);
+            padding: 18px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .related-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            text-decoration: none;
+        }
+
+        .related-card h3 {
+            font-size: 0.95rem;
+            color: var(--primary-color);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background: #ffffff;
+            border-top: 1px solid var(--border-color);
+            padding: 35px 20px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .footer-icons img {
+            transition: transform 0.2s;
+        }
+
+        .footer-icons img:hover {
+            transform: scale(1.15);
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        @media (max-width: 640px) {
+            .article-card {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .styled-list li {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .address-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="https://davidjulian05.github.io/" class="logo">Trang chủ</a>
+            <nav class="nav-links">
+                <a href="https://davidjulian05.github.io/">Trang Chủ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container">
+        <article class="article-card">
+            <h1>Trải Nghiệm Giao Diện Xem Kết Quả Xổ Số Miền Nam Hiện Đại Và Dễ Nhìn</h1>
+
+            <p>Chào Anh chị, trong nhịp sống hiện đại đầy hối hả, việc theo dõi kết quả xổ số kiến thiết miền Nam không chỉ là một thói quen giải trí mà còn là niềm mong đợi của rất nhiều người dân mỗi buổi chiều.</p>
+
+            <p>Để giúp Anh chị có được trải nghiệm xem kết quả tốt nhất, các nền tảng số hiện nay đã không ngừng cải tiến để mang đến một giao diện tối giản, rõ ràng và thân thiện. Một giao diện dễ nhìn không chỉ giúp Anh chị tra cứu thông tin nhanh chóng mà còn giảm thiểu tình trạng mỏi mắt khi phải theo dõi các dãy số liên tục trên màn hình điện thoại. Nhiều người mua vé cũng chọn thói quen xem lại <a href="https://xosothienphu.vn/xsmn-xo-so-mien-nam-sxmn.html" target="_blank" rel="noopener">xổ số miền nam hôm qua</a> để nắm bắt nhịp mở thưởng và theo dõi kết quả sát sao.</p>
+
+            <figure>
+                <img src="https://cdn.upanhlaylink.com/i/ME3xCAxJ.jpg" alt="Kết quả xổ số miền Nam trực tiếp">
+                <figcaption>Nguồn: Vesophattai</figcaption>
+            </figure>
+
+            <h2>Khung Giờ Quay Thưởng Trực Tiếp Của Xổ Số Miền Nam</h2>
+
+            <h3>Thời gian diễn ra buổi mở thưởng hàng ngày</h3>
+            <p>Để không bỏ lỡ những khoảnh khắc hồi hộp khi từng lồng cầu quay số, Anh chị cần nắm vững khung thời gian quay thưởng cố định của khu vực miền Nam. Theo quy định, chương trình quay số mở thưởng trực tiếp sẽ diễn ra từ 16 giờ 10 phút đến 16 giờ 35 phút hàng ngày. Trong khoảng thời gian này, các đài truyền hình địa phương và các trang web chuyên biệt sẽ cập nhật theo thời gian trực tiếp từ trường quay để Anh chị dễ dàng đối chiếu với tờ vé số trên tay mình.</p>
+
+            <h3>Lịch Mở Thưởng Chi Tiết Các Đài Miền Nam Trong Tuần</h3>
+            <p>Khu vực miền Nam có tổng cộng 21 công ty xổ số kiến thiết tham gia phát hành vé. Mỗi ngày trong tuần sẽ có các tỉnh thành khác nhau thực hiện quay số mở thưởng. Anh chị hãy lưu lại lịch cụ thể dưới đây để tiện theo dõi:</p>
+
+            <ul class="styled-list">
+                <li><span><strong>Thứ Hai:</strong> TP.HCM, Đồng Tháp và Cà Mau</span></li>
+                <li><span><strong>Thứ Ba:</strong> Bến Tre, Vũng Tàu và Bạc Liêu</span></li>
+                <li><span><strong>Thứ Tư:</strong> Đồng Nai, Cần Thơ và Sóc Trăng</span></li>
+                <li><span><strong>Thứ Năm:</strong> Tây Ninh, An Giang và Bình Thuận</span></li>
+                <li><span><strong>Thứ Sáu:</strong> Vĩnh Long, Bình Dương và Trà Vinh</span></li>
+                <li><span><strong>Thứ Bảy:</strong> TP.HCM, Long An, Hậu Giang và Bình Phước</span></li>
+                <li><span><strong>Chủ Nhật:</strong> Tiền Giang, Kiên Giang và Đà Lạt</span></li>
+            </ul>
+
+            <h2>Trải Nghiệm Giao Diện Xem Kết Quả Hiện Đại Và Dễ Nhìn</h2>
+
+            <h3>Thiết kế tối ưu cho người dùng di động</h3>
+            <p>Sự tiện lợi luôn là ưu tiên hàng đầu khi Anh chị sử dụng các thiết bị di động để tra cứu thông tin. Giao diện xem kết quả hiện nay được thiết kế với phong cách tối giản, lược bỏ những quảng cáo gây nhiễu và các chi tiết rườm rà.</p>
+
+            <p>Các bảng kết quả được phân chia rõ ràng theo từng giải từ giải Tám đến giải Đặc biệt, giúp Anh chị dễ dàng lướt xem mà không bị nhầm lẫn giữa các con số. Toàn bộ thông tin được cập nhật nhanh chóng, chuẩn xác và tiện lợi tại trang web Xổ số Thiên Phú giúp Anh chị luôn có dữ liệu mới nhất ngay khi buổi quay thưởng kết thúc.</p>
+
+            <figure>
+                <img src="https://cdn.upanhlaylink.com/i/ddBdSV3V.jpg" alt="Xố số miền Nam ngày 21/09/2026">
+                <figcaption>Xố số miền Nam ngày 21/09/2026 - Nguồn ảnh: Xổ số Thiên Phú</figcaption>
+            </figure>
+
+            <h3>Tốc độ tải trang và thao tác thông minh</h3>
+            <p>Một giao diện tốt không chỉ đẹp mà còn phải mượt mà. Anh chị sẽ cảm nhận được sự khác biệt khi thực hiện các thao tác chạm và lướt để xem lại lịch sử kết quả nhiều kỳ trước đó. Hệ thống máy chủ ổn định giúp trang web hiển thị ngay lập tức, không gây hiện tượng giật lag ngay cả trong khung giờ cao điểm khi có hàng triệu người cùng truy cập.</p>
+
+            <p>Sự kết hợp giữa màu sắc hài hòa và phông chữ lớn, rõ nét giúp Anh chị có thể quan sát tốt ở mọi điều kiện ánh sáng khác nhau.</p>
+
+            <h2>Cơ Cấu Giải Thưởng Xổ Số Miền Nam Mới Nhất</h2>
+            <p>Đối với loại vé số truyền thống mệnh giá 10.000 VNĐ của khu vực miền Nam, cơ cấu giải thưởng vô cùng đa dạng với 18 lần quay thưởng cho mỗi đài. Anh chị có thể tham khảo danh sách các hạng giải thưởng cụ thể như sau:</p>
+
+            <ul class="styled-list">
+                <li><span><strong>1. Giải Đặc biệt:</strong> 01 giải (trùng 6 chữ số)</span> <strong>2.000.000.000 VNĐ</strong></li>
+                <li><span><strong>2. Giải Nhất:</strong> 10 giải, mỗi giải</span> <strong>30.000.000 VNĐ</strong></li>
+                <li><span><strong>3. Giải Nhì:</strong> 10 giải, mỗi giải</span> <strong>15.000.000 VNĐ</strong></li>
+                <li><span><strong>4. Giải Ba:</strong> 20 giải, mỗi giải</span> <strong>10.000.000 VNĐ</strong></li>
+                <li><span><strong>5. Giải Tư:</strong> 70 giải, mỗi giải</span> <strong>3.000.000 VNĐ</strong></li>
+                <li><span><strong>6. Giải Năm:</strong> 100 giải, mỗi giải</span> <strong>1.000.000 VNĐ</strong></li>
+                <li><span><strong>7. Giải Sáu:</strong> 300 giải, mỗi giải</span> <strong>400.000 VNĐ</strong></li>
+                <li><span><strong>8. Giải Bảy:</strong> 1.000 giải, mỗi giải</span> <strong>200.000 VNĐ</strong></li>
+                <li><span><strong>9. Giải Tám:</strong> 10.000 giải, mỗi giải</span> <strong>100.000 VNĐ</strong></li>
+                <li><span><strong>10. Giải Phụ Đặc biệt:</strong> 09 giải (sai chữ số đầu tiên)</span> <strong>50.000.000 VNĐ</strong></li>
+                <li><span><strong>11. Giải Khuyến khích:</strong> 45 giải (sai 1 chữ số bất kỳ khác)</span> <strong>6.000.000 VNĐ</strong></li>
+            </ul>
+
+            <h2>Thông Tin Địa Chỉ Các Công Ty Xổ Số Kiến Thiết Miền Nam</h2>
+            <p>Để thuận tiện cho việc liên hệ công tác hoặc thực hiện thủ tục nhận thưởng khi may mắn trúng giải, Anh chị có thể tìm đến trụ sở chính thức của các công ty theo danh sách dưới đây (ví dụ người tham gia dò vé số đài Bình Thuận có thể xem <a href="https://xosothienphu.vn/xsbth-xo-so-binh-thuan-sxbth.html" target="_blank" rel="noopener">so xo binh thuan</a> trực tiếp từ nhà đài):</p>
+
+            <div class="address-grid">
+                <div class="address-card">
+                    <strong>TP. Hồ Chí Minh</strong>
+                    <span>77 Trần Nhân Tôn, Phường An Đông, TP. Hồ Chí Minh.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Đồng Tháp</strong>
+                    <span>Số 01 Nguyễn Huệ, Phường Cao Lãnh, Tỉnh Đồng Tháp.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Cà Mau</strong>
+                    <span>09 Đường Phan Ngọc Hiển, Phường An Xuyên, Tỉnh Cà Mau.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Bến Tre</strong>
+                    <span>Số 303A4, Đoàn Hoàng Minh, phường Phú Tân, tỉnh Vĩnh Long.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Bà Rịa - Vũng Tàu</strong>
+                    <span>31 Đường 3 Tháng 2, Phường Tam Thắng, TP. Hồ Chí Minh.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Bạc Liêu</strong>
+                    <span>07 Hai Bà Trưng, Phường Bạc Liêu, Tỉnh Cà Mau.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Đồng Nai</strong>
+                    <span>1894 Nguyễn Ái Quốc, Khu Phố 4, Phường Trấn Biên, Tỉnh Đồng Nai.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Cần Thơ</strong>
+                    <span>Số 29, đường Cách Mạng Tháng Tám, phường Ninh Kiều, TP. Cần Thơ.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Sóc Trăng</strong>
+                    <span>Số 16, Đường Trần Hưng Đạo, Phường Phú Lợi, TP. Cần Thơ.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Tây Ninh</strong>
+                    <span>315A Trần Hưng Đạo, Khu phố 1, Phường Tân Ninh, Tỉnh Tây Ninh.</span>
+                </div>
+                <div class="address-card">
+                    <strong>An Giang</strong>
+                    <span>64C Nguyễn Thái Học, phường Long Xuyên, An Giang.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Bình Thuận</strong>
+                    <span>343 Võ Văn Kiệt, Phường Phú Thủy, Tỉnh Lâm Đồng.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Vĩnh Long</strong>
+                    <span>51E Nguyễn Trung Trực, phường Tân Hạnh, Tỉnh Vĩnh Long.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Bình Dương</strong>
+                    <span>01 Huỳnh Văn Nghệ, Phường Phú Lợi, TP. Hồ Chí Minh.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Trà Vinh</strong>
+                    <span>Số 54A Phạm Ngũ Lão, Phường Trà Vinh, Tỉnh Vĩnh Long.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Long An</strong>
+                    <span>Số 120, Tuyến tránh Quốc lộ 1, phường Long An, tỉnh Tây Ninh.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Hậu Giang</strong>
+                    <span>Số 151, đường 3 tháng 2, phường Vị Tân, TP. Cần Thơ.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Bình Phước</strong>
+                    <span>725 Quốc lộ 14, phường Bình Phước, tỉnh Đồng Nai.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Tiền Giang</strong>
+                    <span>S5 Thủ Khoa Huân, Phường Mỹ Tho, Tỉnh Đồng Tháp.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Kiên Giang</strong>
+                    <span>Số 94 Đường 3 Tháng 2, Phường Rạch Giá, tỉnh An Giang.</span>
+                </div>
+                <div class="address-card">
+                    <strong>Lâm Đồng (Đà Lạt)</strong>
+                    <span>Số 4 - 6 Hồ Tùng Mậu, Phường Xuân Hương - Đà Lạt, Tỉnh Lâm Đồng.</span>
+                </div>
+            </div>
+
+            <h2>Lợi Ích Xã Hội Của Xổ Số Kiến Thiết Truyền Thống</h2>
+            <p>Tham gia xổ số kiến thiết không chỉ là một hình thức giải trí lành mạnh mà còn đóng góp tích cực vào công cuộc xây dựng quê hương. Với phương châm "Ích nước lợi nhà", toàn bộ nguồn thu từ hoạt động xổ số hợp pháp được các tỉnh thành sử dụng để đóng góp vào các dự án giáo dục, y tế và các công trình phúc lợi xã hội. Đây là cách mà mỗi tờ vé số của Anh chị góp phần tạo nên những giá trị tốt đẹp cho cộng đồng.</p>
+
+            <p>Đừng quên truy cập thường xuyên vào Xổ số Thiên Phú để cập nhật những thông tin mới nhất và đón xem trực tiếp kết quả vào mỗi buổi chiều hàng ngày.</p>
+
+            <div class="read-more-box">
+                <strong>Xem thêm:</strong>
+                <a href="https://davidjulian05.framer.website/cach-do-ve-so-mien-nam-chinh-xac-sau-khi-co-ket-qua-mo-thuong" target="_blank" rel="noopener">Cách dò vé số Miền Nam chính xác sau khi có kết quả mở thưởng</a>
+            </div>
+        </article>
+
+        <!-- Feature xem bài viết liên quan -->
+        <section class="related-posts">
+            <h2>Bài viết liên quan</h2>
+            <div class="related-grid">
+                <a class="related-card" href="https://davidjulian05.github.io/do-ket-qua-xo-so-mien-bac-thu-2-hang-tuan-giao-dien-de-nhin.html">
+                    <h3>Dò kết quả Xổ số Miền Bắc Thứ 2 hàng tuần, giao diện dễ nhìn</h3>
+                </a>
+                <a class="related-card" href="https://davidjulian05.github.io/tra-cuu-ket-qua-xsmb-giao-dien-de-nhin-ngay.html">
+                    <h3>Tra cứu Kết quả XSMB giao diện dễ nhìn ngay</h3>
+                </a>
+                <a class="related-card" href="https://davidjulian05.github.io/don-xem-ket-qua-xo-so-mien-trung-thu-3-voi-chinh-xac.html">
+                    <h3>Đón xem kết quả Xổ Số Miền Trung Thứ 3 chính xác</h3>
+                </a>
+                <a class="related-card" href="https://davidjulian05.github.io/tra-cuu-ket-qua-xo-so-vinh-long-de-theo-doi.html">
+                    <h3>Tra cứu kết quả Xổ số Vĩnh Long dễ theo dõi</h3>
+                </a>
+                <a class="related-card" href="https://davidjulian05.github.io/don-xem-ket-qua-xo-so-mien-nam-thu-6-hang-tuan-giao-dien-de-nhin.html">
+                    <h3>Đón xem kết quả Xổ Số Miền Nam Thứ 6 hàng tuần giao diện dễ nhìn</h3>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-icons">
+            <a href="https://davidjulian05.codeberg.page" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/codeberg.svg" alt="Codeberg" width="32" height="32"></a>
+            <a href="https://davidjulian-nine.vercel.app" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vercel.svg" alt="Vercel" width="32" height="32"></a>
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/cloudflare.svg" alt="Cloudflare Workers" width="32" height="32">
+            <a href="https://davidjulian.netlify.app" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/netlify.svg" alt="Netlify" width="32" height="32"></a>
+            <a href="https://davidjulian05.github.io/" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub" width="32" height="32"></a>
+            <a href="https://davidjulian05.framer.website" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/framer.svg" alt="Framer" width="32" height="32"></a>
+            <a href="https://davidjulian05.onrender.com" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/render.svg" alt="Render" width="32" height="32"></a>
+            <a href="https://gitlab.com/davidjulian05" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gitlab.svg" alt="GitLab" width="32" height="32"></a>
+            <a href="https://pinterest.com/davidjulian0503" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/pinterest.svg" alt="Pinterest" width="32" height="32"></a>
+        </div>
+        <p class="copyright">&copy; 2026 David Julian. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
